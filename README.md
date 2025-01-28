@@ -3,7 +3,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d5a04ebee6ca283e6fe1/maintainability)](https://codeclimate.com/github/vvichgirl/java-project-61/maintainability)
 
 ### Video games
-####Even game
+#### Even game
 [![asciicast](https://asciinema.org/a/qcNC6Uog5L8HAbFG1pTyK5ePf.svg)](https://asciinema.org/a/qcNC6Uog5L8HAbFG1pTyK5ePf)
-####Calc game
+#### Calc game
 [![asciicast](https://asciinema.org/a/QSEVr71xoC3vuJBpO3O7AVm8v.svg)](https://asciinema.org/a/QSEVr71xoC3vuJBpO3O7AVm8v)
+#### CGD game
+[![asciicast](https://asciinema.org/a/S2UAjnFWm2QjxIotjcbQfIgNZ.svg)](https://asciinema.org/a/S2UAjnFWm2QjxIotjcbQfIgNZ)
