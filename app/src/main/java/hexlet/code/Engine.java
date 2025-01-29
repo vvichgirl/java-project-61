@@ -20,7 +20,13 @@ public class Engine {
 
     public static int getNumber(int maxNumber) {
         Random random = new Random();
-        int numRandom = random.nextInt(maxNumber) + 1;
+        int numRandom = random.nextInt(maxNumber);
+        return numRandom;
+    }
+
+    public static int getNumber(int maxNumber, int minNumber) {
+        Random random = new Random();
+        int numRandom = random.nextInt(maxNumber - minNumber) + minNumber;
         return numRandom;
     }
 

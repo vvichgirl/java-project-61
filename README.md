@@ -9,3 +9,5 @@
 [![asciicast](https://asciinema.org/a/QSEVr71xoC3vuJBpO3O7AVm8v.svg)](https://asciinema.org/a/QSEVr71xoC3vuJBpO3O7AVm8v)
 #### CGD game
 [![asciicast](https://asciinema.org/a/S2UAjnFWm2QjxIotjcbQfIgNZ.svg)](https://asciinema.org/a/S2UAjnFWm2QjxIotjcbQfIgNZ)
+#### Progression game
+[![asciicast](https://asciinema.org/a/kZime4d1Mzi3pfBDi8HEkfqnV.svg)](https://asciinema.org/a/kZime4d1Mzi3pfBDi8HEkfnV)i

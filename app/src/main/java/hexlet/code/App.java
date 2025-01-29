@@ -4,6 +4,7 @@ import hexlet.code.games.GameGenerator;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
 
         Scanner scanner = new Scanner(System.in);
@@ -37,6 +39,10 @@ class App {
             case 4:
                 GameGenerator gcd = new GCD();
                 Engine.runGame(gcd);
+                break;
+            case 5:
+                GameGenerator progression = new Progression();
+                Engine.runGame(progression);
                 break;
             default:
                 System.out.println("Wrong command");
