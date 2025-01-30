@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class Progression implements GameGenerator {
+public final class Progression implements GameGenerator {
     private static final String RULE = "What number is missing in the progression?";
     private static final int MAX_NUMBER = 100;
     private static final int MIN_LENGTH = 5;

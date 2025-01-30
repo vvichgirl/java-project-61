@@ -16,7 +16,7 @@ You need to give the correct answer in three rounds to win.
 ```
 git clone git@github.com:vvichgirl/java-project-61.git
 cd java-project-61/app
-make build
+make install
 ```
 
 ### Run the game

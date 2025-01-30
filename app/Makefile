@@ -1,5 +1,5 @@
 run-dist:
 	./build/install/app/bin/app
 
-build:
+install:
 	./gradlew installDist

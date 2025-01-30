@@ -22,31 +22,31 @@ class App {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
-        var userChoice = scanner.nextInt();
+        var userChoice = scanner.nextLine();
 
         switch (userChoice) {
-            case 0:
+            case "0":
                 break;
-            case 1:
+            case "1":
                 Engine.greeting();
                 break;
-            case 2:
+            case "2":
                 GameGenerator even = new Even();
                 Engine.runGame(even);
                 break;
-            case 3:
+            case "3":
                 GameGenerator calc = new Calc();
                 Engine.runGame(calc);
                 break;
-            case 4:
+            case "4":
                 GameGenerator gcd = new GCD();
                 Engine.runGame(gcd);
                 break;
-            case 5:
+            case "5":
                 GameGenerator progression = new Progression();
                 Engine.runGame(progression);
                 break;
-            case 6:
+            case "6":
                 GameGenerator prime = new Prime();
                 Engine.runGame(prime);
                 break;

@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class Calc implements GameGenerator {
+public final class Calc implements GameGenerator {
     private static final String RULE = "What is the result of the expression?";
     private static final int MAX_NUMBER = 100;
     private static final String[] OPERATIONS = {"-", "+", "*"};
