@@ -20,8 +20,9 @@ make build
 ```
 
 ### Run the game
-`make run-dist`
-
+```
+make run-dist
+```
 
 ### Video games
 #### Even game
@@ -31,6 +32,6 @@ make build
 #### CGD game
 [![asciicast](https://asciinema.org/a/S2UAjnFWm2QjxIotjcbQfIgNZ.svg)](https://asciinema.org/a/S2UAjnFWm2QjxIotjcbQfIgNZ)
 #### Progression game
-[![asciicast](https://asciinema.org/a/kZime4d1Mzi3pfBDi8HEkfqnV.svg)](https://asciinema.org/a/kZime4d1Mzi3pfBDi8HEkfnV)
+[![asciicast](https://asciinema.org/a/kZime4d1Mzi3pfBDi8HEkfqnV.svg)](https://asciinema.org/a/kZime4d1Mzi3pfBDi8HEkfqnV)
 #### Prime game
 [![asciicast](https://asciinema.org/a/3Ni2sjZgvXwNK5Opitpq1ZLde.svg)](https://asciinema.org/a/3Ni2sjZgvXwNK5Opitpq1ZLde)
