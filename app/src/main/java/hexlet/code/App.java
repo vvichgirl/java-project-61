@@ -5,6 +5,7 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -16,6 +17,7 @@ class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
 
         Scanner scanner = new Scanner(System.in);
@@ -43,6 +45,10 @@ class App {
             case 5:
                 GameGenerator progression = new Progression();
                 Engine.runGame(progression);
+                break;
+            case 6:
+                GameGenerator prime = new Prime();
+                Engine.runGame(prime);
                 break;
             default:
                 System.out.println("Wrong command");
