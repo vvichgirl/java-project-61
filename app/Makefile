@@ -3,3 +3,8 @@ run-dist:
 
 install:
 	./gradlew installDist
+
+build:
+	./gradlew build
+
+.PHONY: build
