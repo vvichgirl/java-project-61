@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.GameGenerator;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
@@ -28,27 +27,22 @@ class App {
             case "0":
                 break;
             case "1":
-                Engine.greeting();
+                Cli.greeting();
                 break;
             case "2":
-                GameGenerator even = new Even();
-                Engine.runGame(even);
+                Even.run();
                 break;
             case "3":
-                GameGenerator calc = new Calc();
-                Engine.runGame(calc);
+                Calc.run();
                 break;
             case "4":
-                GameGenerator gcd = new GCD();
-                Engine.runGame(gcd);
+                GCD.run();
                 break;
             case "5":
-                GameGenerator progression = new Progression();
-                Engine.runGame(progression);
+                Progression.run();
                 break;
             case "6":
-                GameGenerator prime = new Prime();
-                Engine.runGame(prime);
+                Prime.run();
                 break;
             default:
                 System.out.println("Wrong command");

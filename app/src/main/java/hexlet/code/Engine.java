@@ -1,7 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.GameGenerator;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,6 +14,10 @@ public class Engine {
         System.out.print("May I have your name? ");
         userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
+    }
+
+    public static int getCountRound() {
+        return COUNT_ROUND;
     }
 
     public static int getNumber(int maxNumber) {
@@ -41,14 +43,13 @@ public class Engine {
         return userAnswer.equals(correctAnswer);
     }
 
-    public static void runGame(GameGenerator game) {
+    public static void runGame(String rule, String[][] gameData) {
         greeting();
-        System.out.println(game.getRule());
+        System.out.println(rule);
 
-        for (var currentRound = 1; currentRound <= COUNT_ROUND; currentRound++) {
-            String[] gameData = game.getGameData();
-            String question = gameData[0];
-            String correctAnswer = gameData[1];
+        for (var currentRound = 0; currentRound < COUNT_ROUND; currentRound++) {
+            String question = gameData[currentRound][0];
+            String correctAnswer = gameData[currentRound][1];
 
             System.out.println("Question: " + question);
 

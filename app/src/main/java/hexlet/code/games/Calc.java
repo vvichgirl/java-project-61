@@ -2,12 +2,12 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public final class Calc implements GameGenerator {
+public class Calc {
     private static final String RULE = "What is the result of the expression?";
     private static final int MAX_NUMBER = 100;
     private static final String[] OPERATIONS = {"-", "+", "*"};
 
-    public int calc(int numberOne, String mathOperation, int numberTwo) {
+    public static int calc(int numberOne, String mathOperation, int numberTwo) {
         return switch (mathOperation) {
             case "-" -> numberOne - numberTwo;
             case "*" -> numberOne * numberTwo;
@@ -15,17 +15,21 @@ public final class Calc implements GameGenerator {
         };
     }
 
-    public String[] getGameData() {
-        var numberOne = Engine.getNumber(MAX_NUMBER);
-        var numberTwo = Engine.getNumber(MAX_NUMBER);
-        var maxCountOperations = OPERATIONS.length - 1;
-        var mathOperation = OPERATIONS[Engine.getNumber(maxCountOperations)];
-        var question = numberOne + " " + mathOperation + " " + numberTwo;
-        var correctAnswer = calc(numberOne, mathOperation, numberTwo);
-        return new String[] {question, String.valueOf(correctAnswer)};
-    }
+    public static void run() {
+        var countRound = Engine.getCountRound();
+        String[][] gameData = new String[countRound][2];
 
-    public String getRule() {
-        return RULE;
+        for (var round = 0; round < countRound; round++) {
+            var numberOne = Engine.getNumber(MAX_NUMBER);
+            var numberTwo = Engine.getNumber(MAX_NUMBER);
+            var maxCountOperations = OPERATIONS.length - 1;
+            var mathOperation = OPERATIONS[Engine.getNumber(maxCountOperations)];
+            var question = numberOne + " " + mathOperation + " " + numberTwo;
+            var correctAnswer = calc(numberOne, mathOperation, numberTwo);
+            gameData[round][0] = question;
+            gameData[round][1] = String.valueOf(correctAnswer);
+        }
+
+        Engine.runGame(RULE, gameData);
     }
 }
