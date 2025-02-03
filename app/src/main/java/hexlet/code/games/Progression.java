@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Progression {
     private static final String RULE = "What number is missing in the progression?";
@@ -10,18 +11,14 @@ public class Progression {
     private static final int MAX_STEP = 25;
 
     public static void run() {
-        var countRound = Engine.getCountRound();
-        String[][] gameData = new String[countRound][2];
+        String[][] gameData = new String[Engine.COUNT_ROUND][2];
 
-        for (var round = 0; round < countRound; round++) {
-            var progressionStartNumber = Engine.getNumber(MAX_NUMBER);
-            var progressionLength = Engine.getNumber(MAX_LENGTH, MIN_LENGTH);
-            var progressionStep = Engine.getNumber(MAX_STEP);
-            var skipElement = Engine.getNumber(progressionLength - 1);
-            String[] progressionElements = new String[progressionLength];
-            for (var i = 0; i < progressionLength; i++) {
-                progressionElements[i] = String.valueOf(progressionStartNumber + progressionStep * i);
-            }
+        for (var round = 0; round < Engine.COUNT_ROUND; round++) {
+            var progressionStartNumber = Utils.getNumber(MAX_NUMBER);
+            var progressionLength = Utils.getNumber(MAX_LENGTH, MIN_LENGTH);
+            var progressionStep = Utils.getNumber(MAX_STEP);
+            var skipElement = Utils.getNumber(progressionLength - 1);
+            String[] progressionElements = getProgression(progressionLength, progressionStartNumber, progressionStep);
             var correctAnswer = progressionElements[skipElement];
             progressionElements[skipElement] = "..";
             var question = String.join(" ", progressionElements);
@@ -30,5 +27,14 @@ public class Progression {
         }
 
         Engine.runGame(RULE, gameData);
+    }
+
+    public static String[] getProgression(int progressionLength, int progressionStartNumber, int progressionStep) {
+        String[] progressionElements = new String[progressionLength];
+        for (var i = 0; i < progressionLength; i++) {
+            progressionElements[i] = String.valueOf(progressionStartNumber + progressionStep * i);
+        }
+
+        return progressionElements;
     }
 }

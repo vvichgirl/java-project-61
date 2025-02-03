@@ -45,7 +45,7 @@ class App {
                 Prime.run();
                 break;
             default:
-                System.out.println("Wrong command");
+                System.out.println("Wrong command " + userChoice);
                 break;
         }
 

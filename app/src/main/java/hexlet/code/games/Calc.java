@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     private static final String RULE = "What is the result of the expression?";
@@ -16,14 +17,13 @@ public class Calc {
     }
 
     public static void run() {
-        var countRound = Engine.getCountRound();
-        String[][] gameData = new String[countRound][2];
+        String[][] gameData = new String[Engine.COUNT_ROUND][2];
 
-        for (var round = 0; round < countRound; round++) {
-            var numberOne = Engine.getNumber(MAX_NUMBER);
-            var numberTwo = Engine.getNumber(MAX_NUMBER);
+        for (var round = 0; round < Engine.COUNT_ROUND; round++) {
+            var numberOne = Utils.getNumber(MAX_NUMBER);
+            var numberTwo = Utils.getNumber(MAX_NUMBER);
             var maxCountOperations = OPERATIONS.length - 1;
-            var mathOperation = OPERATIONS[Engine.getNumber(maxCountOperations)];
+            var mathOperation = OPERATIONS[Utils.getNumber(maxCountOperations)];
             var question = numberOne + " " + mathOperation + " " + numberTwo;
             var correctAnswer = calc(numberOne, mathOperation, numberTwo);
             gameData[round][0] = question;
