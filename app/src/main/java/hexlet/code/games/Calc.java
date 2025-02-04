@@ -11,8 +11,9 @@ public class Calc {
     public static int calc(int numberOne, String mathOperation, int numberTwo) {
         return switch (mathOperation) {
             case "-" -> numberOne - numberTwo;
+            case "+" -> numberOne + numberTwo;
             case "*" -> numberOne * numberTwo;
-            default -> numberOne + numberTwo;
+            default -> throw new RuntimeException("Unknown mathOperation" + mathOperation);
         };
     }
 
